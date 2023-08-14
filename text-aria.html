@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text Areai of Live Session</title>
+  </head>
+  <body>
+    <div id="div" style="justify-content: center; display: grid">
+      <p>GORIBER EVALY REBOOTED 2.0</p>
+
+      <textarea name="" id="textarea" cols="40" rows="10"></textarea>
+      <button id="btn" style="margin-top: 30px">Comment</button>
+      <p id="Review">User Review</p>
+    </div>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        const borderArea = document.getElementById("textarea");
+        const bordevalue = borderArea.value;
+
+        const addp = document.createElement("p");
+        addp.innerText = bordevalue;
+
+        const conatiner = document.querySelector("#Review");
+        conatiner.appendChild(addp);
+        borderArea.value = "";
+      });
+
+      document
+        .querySelector("#textarea")
+        .addEventListener("keyup", function (event) {
+          if (event.key === "Enter") {
+            const borderArea = document.getElementById("textarea");
+            const bordevalue = borderArea.value;
+
+            const addp = document.createElement("p");
+            addp.innerText = bordevalue;
+
+            const conatiner = document.querySelector("#Review");
+            conatiner.appendChild(addp);
+            borderArea.value = "";
+          }
+        });
+    </script>
+  </body>
+</html>

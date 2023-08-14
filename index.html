@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Session</title>
+  </head>
+  <body>
+    <div style="display: grid; justify-content: center">
+      <h1 class="tittle">some diffarent Count of Pluse Mainas</h1>
+      <h1 id="count" style="margin-left: 100px">0</h1>
+    </div>
+    <div style="margin-left: 500px">
+      <button id="pluse">+</button>
+      <button id="mainas">-</button>
+    </div>
+
+    <script>
+      let i = 0;
+      document.getElementById("pluse").addEventListener("click", function () {
+        const setpluse = document.getElementById("count");
+        i++;
+        setpluse.innerText = i;
+      });
+
+      document.querySelector("#mainas").addEventListener("click", function () {
+        const setmainas = document.getElementById("count");
+        i--;
+        setmainas.innerText = i;
+      });
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
